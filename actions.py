@@ -62,4 +62,4 @@ def students_info(id='', surname='', name='', patronymic='', group='', mentor=''
     if len(result) == 0:
         return f'Студенты не найдены'
     else:
-        return result
+        return result 
