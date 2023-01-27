@@ -1,5 +1,5 @@
-from user_interface import *
+from controller import *
 import os
 os.system('cls')
 
-print(menu())
+controller.main_menu()
