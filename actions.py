@@ -1,4 +1,7 @@
-import user_interface
+import log
+import user_interface as ui
+import controller
+
 db_file_name = ''
 db = []
 global_id = 0
@@ -6,13 +9,13 @@ global_id = 0
 
 def users_check(arg):
     while arg.isdigit() != True:
-        arg = input('Пожалуйста, введите цифру, соответствующую пункту меню: ')
+        arg = input(ui.show_error_menu())
     return int(arg)
 
 
 def searching():
-    users_check()
-    show_search_menu()
+    ui.show_search_menu()
+    n = users_check(input('Пожалуйста, введите цифру, соответствующую пункту меню: '))
     if n == 1:
         search = input('Пожалуйста, введите id студента: ')
         print(students_info(id=search))
@@ -30,11 +33,13 @@ def searching():
     elif n == 6:
         input('Пожалуйста, введите группу: ')
         print(students_info(group=search))
-    elif n == 0:
+    elif n == 7:
+        log.logging.info('returned to previous menu')
         print('Возврат в предыдущее меню')
-        show_main_menu()
-    elif n == 00:
-        print('Конец работы программы')
+        controller.main_menu()
+    elif n == 8:
+        log.logging.info('Stop program')
+        ui.show_exit_message()
         exit()
     else:
         print('Пожалуйста, введите цифру, соответствующую пункту меню: ')
