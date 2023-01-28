@@ -1,4 +1,4 @@
-from controller import *
+from gb_p_lesson8_db.controller import *
 import os
 os.system('cls')
 

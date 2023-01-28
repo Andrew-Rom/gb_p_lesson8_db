@@ -1,4 +1,4 @@
-import user_inerface
+import user_interface
 db_file_name = ''
 db = []
 global_id = 0
