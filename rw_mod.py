@@ -1,3 +1,5 @@
+import os.path
+
 # чтение
 def read_file(file):
     f = open('database.cvs', 'r', encoding='utf-8')
@@ -31,3 +33,11 @@ def write_file(list):
     f.close()
     return list
 
+def check(file):
+    path = 'database.cvs'
+    isExist = os.path.exists(path)
+    if isExist is True:
+        print("База данных найдена")
+    else:
+        rewrite_file(file)
+        
