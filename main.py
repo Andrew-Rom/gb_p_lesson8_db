@@ -1,5 +1,8 @@
-from gb_p_lesson8_db.controller import *
+import controller
+import log
 import os
 os.system('cls')
 
+log.logging.info('Start program')
 controller.main_menu()
+log.logging.info('Finish program')
