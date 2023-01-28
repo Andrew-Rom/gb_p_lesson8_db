@@ -1,9 +1,9 @@
-import rw_mod
+import rw_mod as db
 
 
-def create_data(file):
-    list_all_person = read_file(file)
-    id = len(list_all_person) + 1
+def create_data():
+    db.read_file()
+    id = db.last_id + 1
     first_name = input('Введите фамилию: ')
     last_name = input('Введите имя: ')
     middle_name = input('Введите отчество: ')
@@ -13,7 +13,7 @@ def create_data(file):
     course = input('Введите курс: ')
     group = input('Введите группу: ')
     teacher = input('Введите ФИО преподавателя: ')
-    new_person = [id, first_name, last_name, middle_name, tel, email, day_of_birth, course, group, teacher]
-    write_file(file, new_person)
+    new_person = [str(id), first_name, last_name, middle_name, tel, email, day_of_birth, course, group, teacher]
+    db.add_data(new_person)
     print('Данные успешно добавлены!')
-    show_db('database.csv')
+    input('Для продолжения нажмите кнопку ввода...')

@@ -1,6 +1,10 @@
 import log
 import user_interface as ui
 import actions as act
+import rw_mod as db
+import change_db
+from tabulate import tabulate
+
 
 def main_menu():
     while True:
@@ -11,12 +15,15 @@ def main_menu():
             ui.show_exit_message()
             exit()
         elif user_command == '1':
-            pass
+            log.logging.info('Show all data')
+            print(tabulate(db.read_file()))
+            input('Для продолжения нажмите кнопку ввода...')
         elif user_command == '2':
             log.logging.error('Selected searching block')
             act.searching()
         elif user_command == '3':
-            pass
+            log.logging.info('Enter new data')
+            change_db.create_data()
         elif user_command == '4':
             pass
         elif user_command == '5':
