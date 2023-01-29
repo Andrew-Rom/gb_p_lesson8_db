@@ -1,4 +1,4 @@
-import log.logging
+import log
 import rw_mod as db
 import user_interface as ui
 
