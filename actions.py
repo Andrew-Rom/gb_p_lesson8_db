@@ -51,6 +51,6 @@ def students_info(id='', surname='', course='', group='', mentor=''):
             continue
         result.append(row)
     if len(result) == 0:
-        return f'Студенты не найдены'
+        return print("Студенты не найдены")
     else:
         return result
