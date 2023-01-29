@@ -25,9 +25,9 @@ def main_menu():
             log.logging.info('Enter new data')
             change_db.create_data()
         elif user_command == '4':
-            pass
+            change_db.change_data()
         elif user_command == '5':
-            pass
+            change_db.del_data()
         elif user_command not in ['0', '1', '2', '3', '4', '5']:
             log.logging.error('Incorrect selection')
             ui.show_error_menu()
