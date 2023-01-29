@@ -34,7 +34,7 @@ def read_file():
                 middle_name = input('Введите отчество: ')
                 tel = input('Введите номер телефона: ')
                 email = input('Введите Email: ')
-                day_of_birth = input('Введите день рождения: ')
+                day_of_birth = input('Введите дату рождения: ')
                 course = input('Введите курс: ')
                 group = input('Введите группу: ')
                 teacher = input('Введите данные преподавателя: ')
